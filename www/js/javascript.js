@@ -54,5 +54,27 @@ function validarFormulario() {
 	//Método de envio
 	form.method = metodo.value;
 
-	return true;
+	//Tipo de Pedra
+	var tipoPedra = document.getElementById("tipoPedra").value;
+
+	//Sorteando o tipo de pedra caso a opção 'Sim' tenha sido marcada
+	var sorteio = document.getElementById("checkbox1");
+	
+	if (sorteio.checked)
+	{
+		var x = Math.floor((Math.random() * 4));
+
+		if (x == 0)
+			tipoPedra = "Marroada";
+		else if (x == 1)
+			tipoPedra = "Ametista";
+		else if (x == 2)
+			tipoPedra = "Topazio";
+		else
+			tipoPedra = "Espinela";
+	}
+
+	console.log(tipoPedra);
+
+	return false;
 }
