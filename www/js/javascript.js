@@ -4,10 +4,6 @@ var eNumPedras = document.getElementById("iconeErroNumPedras");
 var nome = document.getElementById("nomeMonstro");
 var eNome = document.getElementById("iconeErroNome");
 
-$("#formulario").submit(function(e) {
-    e.preventDefault();
-});
-
 function validarFormulario() {
 	//Validação de número de pedras ([0, inf[)
 	if (numPedras.value < 0)
@@ -17,6 +13,8 @@ function validarFormulario() {
 
 		numPedras.parentNode.classList.remove("has-success");
 		eNumPedras.classList.remove("glyphicon-ok");
+
+		return false;
 	}
 	else
 	{
@@ -37,6 +35,8 @@ function validarFormulario() {
 
 			nome.parentNode.classList.remove("has-success");
 			eNome.classList.remove("glyphicon-ok");
+
+			return false;
 		}
 		else
 		{
@@ -47,4 +47,5 @@ function validarFormulario() {
 			eNome.classList.remove("glyphicon-remove");
 		}
 
+	return true;
 }
