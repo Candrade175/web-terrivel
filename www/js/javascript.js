@@ -84,10 +84,6 @@ function validarFormulario() {
 			tipoPedra = "Espinela";
 	}
 
-
-	console.log(corCeu1);
-	console.log(corCeu2);
-
 	//Cor do Céu
 	if (corCeu1 == "Azul")
 		corCeu1 = AZUL;
