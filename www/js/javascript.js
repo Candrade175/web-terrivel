@@ -1,15 +1,50 @@
 var numPedras = document.getElementById("numPedras");
+var eNumPedras = document.getElementById("iconeErroNumPedras");
+
+var nome = document.getElementById("nomeMonstro");
+var eNome = document.getElementById("iconeErroNome");
 
 $("#formulario").submit(function(e) {
     e.preventDefault();
 });
 
 function validarFormulario() {
-	console.log(numPedras.parentNode.className);
+	//Validação de número de pedras ([0, inf[)
 	if (numPedras.value < 0)
 	{
 		numPedras.parentNode.classList.add("has-error");
-		numPedras.parentNode.classList.add("has-feedback");
-		numPedras.parentNode.classList.add("glyphicon");
+		eNumPedras.classList.add("glyphicon-remove");
+
+		numPedras.parentNode.classList.remove("has-success");
+		eNumPedras.classList.remove("glyphicon-ok");
 	}
+	else
+	{
+		numPedras.parentNode.classList.add("has-success");
+		eNumPedras.classList.add("glyphicon-ok");
+
+		numPedras.parentNode.classList.remove("has-error");
+		eNumPedras.classList.remove("glyphicon-remove");
+
+	}
+
+	//Validação de nome (somente letras)
+	for (var i = 0; i < nome.value.length; i++)
+		if ((nome.value[i] < 'a' || nome.value[i] > 'z') && (nome.value[i] < 'A' || nome.value[i] > 'Z'))
+		{
+			nome.parentNode.classList.add("has-error");
+			eNome.classList.add("glyphicon-remove");
+
+			nome.parentNode.classList.remove("has-success");
+			eNome.classList.remove("glyphicon-ok");
+		}
+		else
+		{
+			nome.parentNode.classList.add("has-success");
+			eNome.classList.add("glyphicon-ok");
+
+			nome.parentNode.classList.remove("has-error");
+			eNome.classList.remove("glyphicon-remove");
+		}
+
 }
