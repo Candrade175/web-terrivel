@@ -2,6 +2,10 @@
 	margin-left: 5%;
 }
 
+#enviar {
+	margin-left: 90%;
+}
+
 #formulario {
     outline: 1px solid #AFBEC4;
 	margin: 15% 7%;
@@ -13,6 +17,6 @@ label {
 	text-align: center;
 }
 
-#tamanhoDaPedra {
+#tam_pedras {
 	text-align: center;
 }

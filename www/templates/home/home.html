@@ -22,8 +22,8 @@
 </head>
 
 <body>
-
-	<form id="formulario" class="form-horizontal" onsubmit="return validarFormulario()" method="Get">
+	<form id="formulario" action="http://terrivel.herokuapp.com/monster" class="form-horizontal" onsubmit="return validarFormulario()" method="Get">
+		<!-- Método de envio -->
 		<div class="form-group">
 			<label for="metodo" class="col-sm-2 control-label"> Método </label>
 			<div class="col-sm-10">
@@ -34,33 +34,37 @@
 			</div>
 		</div>
 
+		<!-- Número de Pedras -->
 		<div class="form-group">
-			<label for="numeroDePedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
+			<label for="num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
 			<div class="col-sm-10"> 
-				<input class="form-control" id="numPedras" placeholder="Número de Pedras" required type="numero"> 
+				<input class="form-control" id="num_pedras" placeholder="Número de Pedras" required type="numero"> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNumPedras" aria-hidden="true"></span>
 			</div>
 
 		</div>
 
+		<!-- Tamanho das Pedras -->
 		<div class="form-group">
-			<label for="tamanhoDasPedras" class="col-sm-2 control-label"> Tamanho </label>
+			<label for="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
 
-			<div class="col-sm-10"> <input id="tamanhoDaPedra" max="7" min="1" step="0.5" required type="number" value="3"> </div>
+			<div class="col-sm-10"> <input id="tam_pedras" max="7" min="1" step="0.5" required type="number" value="3"> </div>
 		</div>
 
+		<!-- Nome do Monstro -->
 		<div class="form-group">
-			<label for="nomeMonstro" class="col-sm-2 control-label"> Nome </label>
+			<label for="nome" class="col-sm-2 control-label"> Nome </label>
 			<div class="col-sm-10"> 
-				<input type="nome" class="form-control" id="nomeMonstro" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" required> 
+				<input type="nome" class="form-control" id="nome" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" required> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNome" aria-hidden="true"></span>
 			</div>
 		</div>
 
+		<!-- Primeira Cor do Céu -->
 		<div class="form-group">
 			<label for="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
 			<div class="col-sm-10">
-			    <select class="form-control">
+			    <select class="form-control" id="corCeu1">
 			    	<option> Azul </option>
 					<option> Amarelo </option>
 					<option> Indigo </option>
@@ -72,10 +76,11 @@
 			</div>
 		</div>
 
+		<!-- Segunda Cor do Céu -->
 		<div class="form-group">
-			<label for="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
+			<label type="cor" for="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
 			<div class="col-sm-10">
-			    <select class="form-control">
+			    <select class="form-control" id="corCeu2">
 			    	<option> Azul </option>
 					<option> Amarelo </option>
 					<option> Indigo </option>
@@ -87,11 +92,12 @@
 			</div>
 		</div>
 
+		<!-- Tipo de Pedra -->
 		<div class="form-group">
-		    <label for="tipoPedra" class="col-sm-2 control-label"> Tipo </label>
+		    <label for="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
 
 		    <div class="col-sm-10">
-			    <select class="form-control" id="tipoPedra">
+			    <select class="form-control" id="tipo_pedras">
 			    	<option> Marroada </option>
 					<option> Ametista </option>
 					<option> Topazio </option>
@@ -100,8 +106,9 @@
 		    </div>
 	  	</div>
 
+	  	<!-- Pedra Sortida -->
 	  	<div class="form-group">
-	  		<label for="pedraSortida" class="col-sm-2 control-label"> Tipo Sortida </label>
+	  		<label for="tipo_pedras_sortidas" class="col-sm-2 control-label"> Tipo Sortida </label>
 
 	  		<label class="checkbox-inline">
 	  			<input type="radio" id="checkbox1" name="opcao" value="sim"> Sim
@@ -111,7 +118,8 @@
   			</label>
 	  	</div>
 
-	  	<input class="btn btn-default" type="submit" value="Enviar">
+	  	<!-- Botão Enviar -->
+	  	<input class="btn btn-default" type="submit" value="Enviar" id="enviar">
 	</form>
 
     <!-- JavaScript -->
