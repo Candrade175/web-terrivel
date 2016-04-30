@@ -2,5 +2,5 @@
 
 Fontes para pesquisa:
 
-1) A importaÁ„o dos recursos bootsrap foram copiados de "http://getbootstrap.com/getting-started/"
-2) Teve-se como base os cÛdigos de "http://getbootstrap.com/css/#forms" para a criaÁ„o dos formul·rios
+1) A importa√ß√£o dos recursos bootstrap foram copiados de "http://getbootstrap.com/getting-started/"
+2) Teve-se como base os c√≥digos de "http://getbootstrap.com/css/#forms" para a cria√ß√£o dos formul√°rios
