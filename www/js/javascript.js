@@ -4,6 +4,12 @@ var eNumPedras = document.getElementById("iconeErroNumPedras");
 var nome = document.getElementById("nomeMonstro");
 var eNome = document.getElementById("iconeErroNome");
 
+var form = document.getElementById("formulario");
+
+var metodo = document.getElementById("metodo");
+
+console.log(metodo.option);
+
 function validarFormulario() {
 	//Validação de número de pedras ([0, inf[)
 	if (numPedras.value < 0)
@@ -46,6 +52,9 @@ function validarFormulario() {
 			nome.parentNode.classList.remove("has-error");
 			eNome.classList.remove("glyphicon-remove");
 		}
+
+	//Método de envio
+	form.method = 
 
 	return true;
 }
