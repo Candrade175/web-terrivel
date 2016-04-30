@@ -12,18 +12,7 @@ var tipoPedra = document.getElementById("tipo_pedras").value;
 
 var sorteio = document.getElementById("checkbox1");
 
-var AZUL = "0D15F1";
-var AMARELO = "E6F10D";
-var INDIGO = "9065AC";
-var LARANJA = "E3921A";
-var VERDE = "1BC31E";
-var VERMELHO = "FB0622";
-var VIOLETA = "B854B8";
-
 function validarFormulario() {
-	var corCeu1 = document.getElementById("corCeu1").value;
-	var corCeu2 = document.getElementById("corCeu2").value;
-
 	//Validação de número de pedras ([0, inf[)
 	if (numPedras.value < 0 || isNaN(numPedras.value))
 	{
@@ -83,37 +72,6 @@ function validarFormulario() {
 		else
 			tipoPedra = "Espinela";
 	}
-
-	//Cor do Céu
-	if (corCeu1 == "Azul")
-		corCeu1 = AZUL;
-	else if (corCeu1 == "Amarelo")
-		corCeu1 = AMARELO;
-	else if (corCeu1 == "Indigo")
-		corCeu1 = INDIGO;
-	else if (corCeu1 == "Laranja")
-		corCeu1 = LARANJA;
-	else if (corCeu1 == "Verde")
-		corCeu1 = VERDE;
-	else if (corCeu1 == "Vermelho")
-		corCeu1 = VERMELHO;
-	else
-		corCeu1 = VIOLETA;
-
-	if (corCeu2 == "Azul")
-		corCeu2 = AZUL;
-	else if (corCeu2 == "Amarelo")
-		corCeu2 = AMARELO;
-	else if (corCeu2 == "Indigo")
-		corCeu2 = INDIGO;
-	else if (corCeu2 == "Laranja")
-		corCeu2 = LARANJA;
-	else if (corCeu2 == "Verde")
-		corCeu2 = VERDE;
-	else if (corCeu2 == "Vermelho")
-		corCeu2 = VERMELHO;
-	else
-		corCeu2 = VIOLETA;
 
 	return true;
 }
