@@ -2,11 +2,15 @@
 	margin-left: 5%;
 }
 
-#get {
+#formulario {
 	margin: 10%;
 	width: 50%;
 }
 
 label {
+	text-align: center;
+}
+
+#tamanhoDaPedra {
 	text-align: center;
 }
