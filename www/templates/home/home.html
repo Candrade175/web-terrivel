@@ -2,12 +2,92 @@
 	<!-- Stylesheet -->
     <link href="../../css/stylesheet.css" rel="stylesheet">
 
+    <!-- Aceitar acentos -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- Bootstrap -->
+    <!-- Código copiado de http://getbootstrap.com/getting-started/ -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-	<h3> Olá </h3>
+	
+	<form id="get" class="form-horizontal">
+		<div class="form-group">
+			<label for="numeroDePedras" class="col-sm-2 control-label"> Nº Pedras </label>
+			<div class="col-sm-10"> <input type="numero" class="form-control" id="numPedras" placeholder="Número de Pedras"> </div>
+		</div>
 
+		<div class="form-group">
+			<label for="tamanhoDasPedras" class="col-sm-2 control-label"> Tamanho </label>
+
+			<span id="caixasDeSelecao">
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho1" value="op1"> 1 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho2" value="op2"> 2 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho3" value="op3"> 3 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho4" value="op4"> 4 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho5" value="op5"> 5 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho6" value="op6"> 6 </label>
+				<label class="checkbox-inline"> <input type="checkbox" id="checkboxTamanho7" value="op7"> 7 </label>
+			</span>
+		</div>
+
+		<div class="form-group">
+			<label for="corCeu1" class="col-sm-2 control-label"> Primeira cor</label>
+			<div class="col-sm-10"> <input type="cor" class="form-control" id="corCeu1" placeholder="Cor"> </div>
+		</div>
+
+		<div class="form-group">
+			<label for="corCeu2" class="col-sm-2 control-label"> Segunda cor</label>
+
+			<div class="col-sm-10"> <input type="cor" class="form-control" id="corCeu2" placeholder="Cor"> </div>
+		</div>
+
+		<div class="form-group">
+		    <label for="tipoPedra" class="col-sm-2 control-label"> Tipo </label>
+
+		    <div class="col-sm-10">
+			    <select class="form-control">
+			    	<option> Marroada </option>
+					<option> Ametista </option>
+					<option> Topazio </option>
+					<option> Espinela </option>
+			    </select>
+		    </div>
+
+
+	  	</div>
+	</form>
+
+	<!-- <form>
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputFile">File input</label>
+	    <input type="file" id="exampleInputFile">
+	    <p class="help-block">Example block-level help text here.</p>
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Check me out
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form> -->
 
     <!-- JavaScript -->
 	<script src="../../js/javascript.js"></script>
