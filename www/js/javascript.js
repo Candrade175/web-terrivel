@@ -8,11 +8,9 @@ var form = document.getElementById("formulario");
 
 var metodo = document.getElementById("metodo");
 
-console.log(metodo.option);
-
 function validarFormulario() {
 	//Validação de número de pedras ([0, inf[)
-	if (numPedras.value < 0)
+	if (numPedras.value < 0 || isNaN(numPedras.value))
 	{
 		numPedras.parentNode.classList.add("has-error");
 		eNumPedras.classList.add("glyphicon-remove");
@@ -54,7 +52,7 @@ function validarFormulario() {
 		}
 
 	//Método de envio
-	form.method = 
+	form.method = metodo.value;
 
 	return true;
 }
