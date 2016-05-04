@@ -27,7 +27,7 @@
 
 		<!-- Método de envio -->
 		<div class="form-group">
-			<label for="metodo" class="col-sm-2 control-label"> Método </label>
+			<label type="metodo" for="metodo" class="col-sm-2 control-label"> Método </label>
 			<div class="col-sm-10">
 			    <select class="form-control" id="metodo">
 			    	<option value="get" selected> Get </option>
@@ -38,7 +38,7 @@
 
 		<!-- Número de Pedras -->
 		<div class="form-group">
-			<label for="num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
+			<label type="numero" for="num_pedras" name= "num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
 			<div class="col-sm-10"> 
 				<input class="form-control" id="num_pedras" placeholder="Número de Pedras" required type="numero"> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNumPedras" aria-hidden="true"></span>
@@ -48,14 +48,14 @@
 
 		<!-- Tamanho das Pedras -->
 		<div class="form-group">
-			<label for="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
+			<label type="numero" for="tam_pedras" name="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
 
 			<div class="col-sm-10"> <input id="tam_pedras" max="7" min="1" step="0.5" required type="number" value="3"> </div>
 		</div>
 
 		<!-- Nome do Monstro -->
 		<div class="form-group">
-			<label for="nome" class="col-sm-2 control-label"> Nome </label>
+			<label type="nome" for="nome" name="nome" class="col-sm-2 control-label"> Nome </label>
 			<div class="col-sm-10"> 
 				<input type="nome" class="form-control" id="nome" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" required> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNome" aria-hidden="true"></span>
@@ -64,7 +64,7 @@
 
 		<!-- Primeira Cor do Céu -->
 		<div class="form-group">
-			<label for="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
+			<label type="cor" for="corCeu1" nome="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
 			<div class="col-sm-10">
 			    <select class="form-control" id="corCeu1">
 			    	<option value="#0D15F1"> Azul </option>
@@ -80,7 +80,7 @@
 
 		<!-- Segunda Cor do Céu -->
 		<div class="form-group">
-			<label type="cor" for="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
+			<label type="cor" for="corCeu2" name="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
 			<div class="col-sm-10">
 			    <select class="form-control" id="corCeu2">
 			    	<option value="#0D15F1"> Azul </option>
@@ -96,7 +96,7 @@
 
 		<!-- Tipo de Pedra -->
 		<div class="form-group">
-		    <label for="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
+		    <label type="tipo" for="tipo_pedras" name="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
 
 		    <div class="col-sm-10">
 			    <select class="form-control" id="tipo_pedras">
@@ -110,12 +110,12 @@
 
 	  	<!-- Pedra Sortida -->
 	  	<div class="form-group">
-	  		<label for="tipo_pedras_sortidas" class="col-sm-2 control-label"> Tipo Sortida </label>
+	  		<label type="selecao" for="tipo_pedras_sortidas" name="tipo_pedras_sortidas" class="col-sm-2 control-label"> Tipo Sortida </label>
 
-	  		<label class="checkbox-inline">
+	  		<label type="selecao" class="checkbox-inline">
 	  			<input type="radio" id="checkbox1" name="tipo_pedras_sortidas" value="sim"> Sim
   			</label>
-	  		<label class="checkbox-inline">
+	  		<label type="selecao" class="checkbox-inline">
 	  			<input type="radio" id="checkbox2" name="tipo_pedras_sortidas" value="nao" checked> Não
   			</label>
 	  	</div>
