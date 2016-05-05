@@ -38,9 +38,9 @@
 
 		<!-- Número de Pedras -->
 		<div class="form-group">
-			<label type="numero" for="num_pedras" name= "num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
+			<label type="numero" for="num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
 			<div class="col-sm-10"> 
-				<input class="form-control" id="num_pedras" placeholder="Número de Pedras" required type="numero"> 
+				<input class="form-control" id="num_pedras" name="num_pedras" placeholder="Número de Pedras" required type="numero"> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNumPedras" aria-hidden="true"></span>
 			</div>
 
@@ -48,25 +48,25 @@
 
 		<!-- Tamanho das Pedras -->
 		<div class="form-group">
-			<label type="numero" for="tam_pedras" name="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
+			<label type="numero" for="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
 
-			<div class="col-sm-10"> <input id="tam_pedras" max="7" min="1" step="0.5" required type="number" value="3"> </div>
+			<div class="col-sm-10"> <input id="tam_pedras" max="7" min="1" name="tam_pedras" step="0.5" required type="number" value="3"> </div>
 		</div>
 
 		<!-- Nome do Monstro -->
 		<div class="form-group">
 			<label type="nome" for="nome" name="nome" class="col-sm-2 control-label"> Nome </label>
 			<div class="col-sm-10"> 
-				<input type="nome" class="form-control" id="nome" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" required> 
+				<input class="form-control" id="nome" name="nome" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" type="nome" required> 
 				<span class="glyphicon form-control-feedback" id="iconeErroNome" aria-hidden="true"></span>
 			</div>
 		</div>
 
 		<!-- Primeira Cor do Céu -->
 		<div class="form-group">
-			<label type="cor" for="corCeu1" nome="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
+			<label type="cor" for="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
 			<div class="col-sm-10">
-			    <select class="form-control" id="corCeu1">
+			    <select class="form-control" id="corCeu1" name="corCeu1">
 			    	<option value="#0D15F1"> Azul </option>
 					<option value="#E6F10D"> Amarelo </option>
 					<option value="#9065AC"> Indigo </option>
@@ -80,9 +80,9 @@
 
 		<!-- Segunda Cor do Céu -->
 		<div class="form-group">
-			<label type="cor" for="corCeu2" name="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
+			<label type="cor" for="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
 			<div class="col-sm-10">
-			    <select class="form-control" id="corCeu2">
+			    <select class="form-control" id="corCeu2" name="corCeu2">
 			    	<option value="#0D15F1"> Azul </option>
 					<option value="#E6F10D"> Amarelo </option>
 					<option value="#9065AC"> Indigo </option>
@@ -96,14 +96,14 @@
 
 		<!-- Tipo de Pedra -->
 		<div class="form-group">
-		    <label type="tipo" for="tipo_pedras" name="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
+		    <label type="tipo" for="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
 
 		    <div class="col-sm-10">
-			    <select class="form-control" id="tipo_pedras">
-			    	<option> Marroada </option>
-					<option> Ametista </option>
-					<option> Topazio </option>
-					<option> Espinela </option>
+			    <select class="form-control" id="tipo_pedras" name="tipo_pedras">
+			    	<option value="marroada"> Marroada </option>
+					<option value="ametista"> Ametista </option>
+					<option value="topazio"> Topazio </option>
+					<option value="espinela"> Espinela </option>
 			    </select>
 		    </div>
 	  	</div>
