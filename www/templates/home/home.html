@@ -1,0 +1,129 @@
+<head>
+	<!-- Stylesheet -->
+    <link href="../../css/stylesheet.css" rel="stylesheet">
+
+    <!-- Aceitar acentos -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- Código copiado de http://getbootstrap.com/getting-started/ -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+
+<body>		
+	<form id="formulario" action="http://terrivel.herokuapp.com/monster" class="form-horizontal" onsubmit="return validarFormulario()" method="Get">
+		<h3 id="titulo"> Formulário para o <span id="verde"> Incrível Monstro Verde </span> que Come Pedras e Mora Debaixo da Terra </h3>
+
+		<!-- Método de envio -->
+		<div class="form-group">
+			<label type="metodo" for="metodo" class="col-sm-2 control-label"> Método </label>
+			<div class="col-sm-10">
+			    <select class="form-control" id="metodo">
+			    	<option value="get" selected> Get </option>
+					<option value="post"> Post </option>
+			    </select>
+			</div>
+		</div>
+
+		<!-- Número de Pedras -->
+		<div class="form-group">
+			<label type="numero" for="num_pedras" class="col-sm-2 control-label has-feedback"> Nº Pedras </label>
+			<div class="col-sm-10"> 
+				<input class="form-control" id="num_pedras" name="num_pedras" placeholder="Número de Pedras" required type="numero"> 
+				<span class="glyphicon form-control-feedback" id="iconeErroNumPedras" aria-hidden="true"></span>
+			</div>
+
+		</div>
+
+		<!-- Tamanho das Pedras -->
+		<div class="form-group">
+			<label type="numero" for="tam_pedras" class="col-sm-2 control-label"> Tamanho </label>
+
+			<div class="col-sm-10"> <input id="tam_pedras" max="7" min="1" name="tam_pedras" step="0.5" required type="number" value="3"> </div>
+		</div>
+
+		<!-- Nome do Monstro -->
+		<div class="form-group">
+			<label type="nome" for="nome" class="col-sm-2 control-label"> Nome </label>
+			<div class="col-sm-10"> 
+				<input class="form-control" id="nome" name="nome" placeholder="Nome para o Incrível Monstro Verde que Come Pedras e Mora Debaixo da Terra" type="nome" required> 
+				<span class="glyphicon form-control-feedback" id="iconeErroNome" aria-hidden="true"></span>
+			</div>
+		</div>
+
+		<!-- Primeira Cor do Céu -->
+		<div class="form-group">
+			<label type="cor" for="corCeu1" class="col-sm-2 control-label"> Primeira cor </label>
+			<div class="col-sm-10">
+			    <select class="form-control" id="corCeu1" name="corCeu1">
+			    	<option value="#0D15F1"> Azul </option>
+					<option value="#E6F10D"> Amarelo </option>
+					<option value="#9065AC"> Indigo </option>
+					<option value="#E3921A"> Laranja </option>
+					<option value="#1BC31E"> Verde </option>
+					<option value="#FB0622"> Vermelho </option>
+					<option value="#B854B8"> Violeta </option>
+			    </select>
+			</div>
+		</div>
+
+		<!-- Segunda Cor do Céu -->
+		<div class="form-group">
+			<label type="cor" for="corCeu2" class="col-sm-2 control-label"> Segunda cor </label>
+			<div class="col-sm-10">
+			    <select class="form-control" id="corCeu2" name="corCeu2">
+			    	<option value="#0D15F1"> Azul </option>
+					<option value="#E6F10D"> Amarelo </option>
+					<option value="#9065AC"> Indigo </option>
+					<option value="#E3921A"> Laranja </option>
+					<option value="#1BC31E"> Verde </option>
+					<option value="#FB0622"> Vermelho </option>
+					<option value="#B854B8"> Violeta </option>
+			    </select>
+			</div>
+		</div>
+
+		<!-- Tipo de Pedra -->
+		<div class="form-group">
+		    <label type="tipo" for="tipo_pedras" class="col-sm-2 control-label"> Tipo </label>
+
+		    <div class="col-sm-10">
+			    <select class="form-control" id="tipo_pedras" name="tipo_pedras">
+			    	<option value="marroada"> Marroada </option>
+					<option value="ametista"> Ametista </option>
+					<option value="topazio"> Topazio </option>
+					<option value="espinela"> Espinela </option>
+			    </select>
+		    </div>
+	  	</div>
+
+	  	<!-- Pedra Sortida -->
+	  	<div class="form-group">
+	  		<label type="selecao" for="tipo_pedras_sortidas" class="col-sm-2 control-label"> Tipo Sortida </label>
+
+	  		<label type="selecao" class="checkbox-inline">
+	  			<input type="radio" id="checkbox1" name="tipo_pedras_sortidas" value="sim"> Sim
+  			</label>
+	  		<label type="selecao" class="checkbox-inline">
+	  			<input type="radio" id="checkbox2" name="tipo_pedras_sortidas" value="nao" checked> Não
+  			</label>
+	  	</div>
+
+	  	<!-- Botão Enviar -->
+	  	<input class="btn btn-default" type="submit" value="Enviar" id="enviar">
+	</form>
+
+    <!-- JavaScript -->
+	<script src="../../js/javascript.js"></script>
+</body>
